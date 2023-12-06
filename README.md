@@ -2,13 +2,13 @@
 
 1.先创建一个文件夹（名字必须为mysite2，原因未知，应该是里面的一些配置都是我创建项目时候配置好了，不是这个名字得改配置，暂时不知道怎么改，可以研究下）拉取项目到本地
 
-2.进入VENV环境
-
-3.安装python需要的依赖包
+2.安装python需要的依赖包
 
 在项目文件目录（根目录）
 
 pip install -r requirements.txt
+
+3.进入VENV环境
 
 4.需要提前安装MySQL，否则需要修改setting.py关于databases的数据
 

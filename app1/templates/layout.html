@@ -1,0 +1,109 @@
+{#Artificial intelligence functions serve community systems#}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css' %}">
+    {#    <link rel="stylesheet" href="{% static 'pluglns/bootstrap-icons-1.11.2/font/bootstrap-icons.css' %}">#}
+    {% block css %}
+
+    {% endblock %}
+
+    <style>
+        .flownav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2001;
+            width: 100%;
+        }
+
+        #daohang li .text-white:hover{
+            font-size: 20px;
+        }
+
+        #account {
+            display: none;
+        }
+
+        #register {
+            display: -moz-inline-block;
+        }
+    </style>
+
+</head>
+<body>
+
+<header class="p-3 text-bg-dark flownav">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/index" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <img class="bi me-2" src="{% static 'img/logo.jpg' %}" width=50px height=45px>
+            </a>
+
+            <ul id="daohang" class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/index" class="nav-link px-2 text-secondary">主页</a></li>
+                <li><a href="/function" class="nav-link px-2 text-white">功能</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">API</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">社区</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">关于</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                       aria-label="Search">
+            </form>
+
+            <div id="register" class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">登 录</button>
+                <button type="button" class="btn btn-warning">注 册</button>
+            </div>
+
+            <div id="account" class="text-end">
+
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small" style="">
+                    <li><a class="dropdown-item" href="#">个人信息</a></li>
+                    <li><a class="dropdown-item" href="#">用户管理</a></li>
+                    <li><a class="dropdown-item" href="#">其它</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">注 销</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div>
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+
+{#<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>#}
+{#<script src="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js' %}"></script>#}
+<script src="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js' %}"></script>
+{% block js %}
+
+{% endblock %}
+</body>
+</html>

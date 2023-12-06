@@ -12,6 +12,8 @@ pip install -r requirements.txt
 
 4.需要提前安装MySQL，否则需要修改setting.py关于databases的数据
 
+先修改一些MySQL的参数，让他与你电脑的参数一致，不然无法连接数据库
+
 创建数据库，也可以理解为初始化数据库
 
 在项目文件夹目录下执行

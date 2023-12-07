@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 在项目文件夹目录下执行
 
-python manage.py makemigrations mainsite
+python manage.py makemigrations
 
 python manage.py migrate
 

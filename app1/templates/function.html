@@ -1,3 +1,4 @@
+{#https://v5.bootcss.com/docs/examples/album/#}
 {% extends 'layout.html' %}
 {% load static %}
 
@@ -65,14 +66,12 @@
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">Album example</h1>
-                <p class="lead text-muted">Something short and leading about the collection below—its contents, the
-                    creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it
-                    entirely.</p>
-                <p>
-                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-                </p>
+                <h1 class="fw-light">AI 功能</h1>
+                <p class="lead text-muted">这里能提供一些简单的AI功能体验，实现低门槛普及AI功能的使用。</p>
+                {#                <p>#}
+                {#                    <a href="#" class="btn btn-primary my-2">Main call to action</a>#}
+                {#                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>#}
+                {#                </p>#}
             </div>
         </div>
     </section>
@@ -83,21 +82,30 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false"
+                             src="{% static 'tmp/funtion/TranPic/output/example.jpg' %}" alt="">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+                        {#<text x="50%" y="50%" fill="#eceeef" dy=".3em">图片风格转换</text>#}
+
+                        {% comment %}<svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
                             <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">图片风格转换</text>
+                        </svg>{% endcomment %}
+                        <div class="card-header"><h3>图像风格转化</h3></div>
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">提供内容图像和风格图像，通过AI创造出融合两张图像元素的新图像。</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a
+                                            href="/function/funTranPic/" class="page-link">体 验</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">源 码</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                <small class="text-muted">9 min</small>
                             </div>
                         </div>
                     </div>
@@ -283,5 +291,5 @@
 {% endblock %}
 
 {% block js %}
-    <script src="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js' %}"></script>
+
 {% endblock %}

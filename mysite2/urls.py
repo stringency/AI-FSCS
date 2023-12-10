@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app1.views import index, function, admin
+from app1.views import index, function,API,community,about, admin
 
 urlpatterns = [
     # path("admin/", admin.site.urls),
@@ -31,6 +31,19 @@ urlpatterns = [
 
     # 主页
     path("index/", index.index),
+
     # 功能
-    path("function/", function.index)
+    path("function/", function.index),
+    # 图片风格转换功能
+    path("function/funTranPic/", function.funTranPic),
+
+    # API
+    path("API/", API.index),
+
+    # 社区
+    path("community/", community.index),
+
+    # 关于
+    path("about/", about.index),
+
 ]

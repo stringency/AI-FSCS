@@ -12,11 +12,18 @@
     </title>
     <link rel="stylesheet" href="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css' %}">
     {#    <link rel="stylesheet" href="{% static 'pluglns/bootstrap-icons-1.11.2/font/bootstrap-icons.css' %}">#}
+    <link href="{% static '/css/index/carousel.css' %}" rel="stylesheet">
     {% block css %}
 
     {% endblock %}
 
     <style>
+        body {
+            padding-top: 77px;
+            padding-bottom: 3rem;
+            color: #5a5a5a;
+        }
+
         .flownav {
             position: fixed;
             left: 0;
@@ -25,7 +32,11 @@
             width: 100%;
         }
 
-        #daohang li .text-white:hover{
+        #daohang {
+            height: 40px;
+        }
+
+        #daohang li .text-white:hover {
             font-size: 20px;
         }
 
@@ -49,11 +60,29 @@
             </a>
 
             <ul id="daohang" class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/index" class="nav-link px-2 text-secondary">主页</a></li>
-                <li><a href="/function" class="nav-link px-2 text-white">功能</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">API</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">社区</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">关于</a></li>
+                <li id="home_li"><a href="/index" class="nav-link px-2 text-secondary text-white">主页</a></li>
+                <li id="function_li"><a href="/function" class="nav-link px-2 text-secondary text-white">功能</a></li>
+
+                <li id="API_li"><a href="/API" class="nav-link px-2 text-secondary text-white">API</a>
+
+                </li>
+                <li id="community_li"><a href="/community" class="nav-link px-2 text-secondary text-white">社区</a></li>
+                <li id="about_li" class="nav-item dropdown"><a href="/about"
+                                                               class="nav-link dropdown-toggle px-2 text-secondary text-white"
+                                                               data-bs-toggle="dropdown" role="button"
+                                                               aria-expanded="false">关于</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/about">了 解 项 目</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="">友 情 赞 助</a></li>
+                        <li><a class="dropdown-item" href="">参 与 合 作</a></li>
+                        <li><a class="dropdown-item" href="">给 予 意 见</a></li>
+                        <li><a class="dropdown-item" href="">提 交 投 诉</a></li>
+                        <li><a class="dropdown-item" href="">反 应 问 题</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -86,6 +115,9 @@
     </div>
 </header>
 
+<div>
+
+</div>
 
 <div>
     {% block content %}
@@ -93,17 +125,43 @@
     {% endblock %}
 </div>
 
+
 <!-- FOOTER -->
+<hr class="featurette-divider">
 <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    <p class="float-end"><a href="/index">返回首页</a></p>
+    <p>© 2023–now 广东财经大学,计实一班,17项目-开发团队 · 联系邮箱：1422699629@qq.com · <a
+            href="https://www.gdufe.edu.cn/main.htm" target="_blank">企业简介</a> · <a href="#">团队介绍</a></p>
 </footer>
 
-{#<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>#}
-{#<script src="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js' %}"></script>#}
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js' %}"></script>
 <script src="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js' %}"></script>
-{% block js %}
 
+{% block js %}
+    <script type="text/javascript">
+        {% comment %}$(function () {
+            // 页面框架加载完成之后代码自动执行
+            bindBtn1Event();
+
+        })
+
+        $(function bindBtn1Event() {
+            $("#btn1").click(function () {
+                $.ajax({
+                    url: '/task/ajax/',
+                    type: "post",
+                    data: {
+                        n1: 123,
+                        n2: 456
+                    },
+                    success: function (res) {
+                        console.log(res);
+                    }
+                })
+            })
+        }){% endcomment %}
+    </script>
 {% endblock %}
 </body>
 </html>

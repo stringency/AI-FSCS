@@ -1,0 +1,419 @@
+{#https://v5.bootcss.com/docs/examples/blog/#}
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    AI API
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/API/API.css' %}">
+{#    这里可能需要翻墙才能拿到的字体#}
+    <link href="{% static 'css/fonts/fonts_googleapis.css' %}" rel="stylesheet">
+    <style class="__web-inspector-hide-shortcut__">
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div id="MathJax_Message" style="display: none;"></div>
+
+    <div class="container">
+        <header class="blog-header lh-1 py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <a class="link-secondary" href="#">订 阅</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">API</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="link-secondary" href="#" aria-label="Search" _mstaria-label="74607">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+                             viewBox="0 0 24 24"><title _mstHash="4">Search</title>
+                            <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                            <path d="M21 21l-5.2-5.2"></path>
+                        </svg>
+                    </a>
+                    {% comment %}<a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>{% endcomment %}
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="#">World</a>
+                <a class="p-2 link-secondary" href="#">U.S.</a>
+                <a class="p-2 link-secondary" href="#">Technology</a>
+                <a class="p-2 link-secondary" href="#">Design</a>
+                <a class="p-2 link-secondary" href="#">Culture</a>
+                <a class="p-2 link-secondary" href="#">Business</a>
+                <a class="p-2 link-secondary" href="#">Politics</a>
+                <a class="p-2 link-secondary" href="#">Opinion</a>
+                <a class="p-2 link-secondary" href="#">Science</a>
+                <a class="p-2 link-secondary" href="#">Health</a>
+                <a class="p-2 link-secondary" href="#">Style</a>
+                <a class="p-2 link-secondary" href="#">Travel</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+                    efficiently about what’s most interesting in this post’s contents.</p>
+                <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0">Featured post</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                             focusable="false" _mstaria-label="470535" _mstHash="26"><title _mstHash="27">
+                            Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" _mstHash="28">Thumbnail</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Post title</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                             focusable="false" _mstaria-label="470535" _mstHash="34"><title _mstHash="35">
+                            Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" _mstHash="36">Thumbnail</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    From the Firehose
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title mb-1">Sample blog post</h2>
+                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+
+                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
+                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+                    <hr>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <h2>Blockquotes</h2>
+                    <p>This is an example blockquote in action:</p>
+                    <blockquote class="blockquote">
+                        <p>Quoted text goes here.</p>
+                    </blockquote>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <h3>Example lists</h3>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                        other highly repetitive body text used throughout. This is an example unordered list:</p>
+                    <ul>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ul>
+                    <p>And this is an ordered list:</p>
+                    <ol>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ol>
+                    <p>And this is a definition list:</p>
+                    <dl>
+                        <dt>HyperText Markup Language (HTML)</dt>
+                        <dd>The language used to describe and define the content of a Web page</dd>
+                        <dt>Cascading Style Sheets (CSS)</dt>
+                        <dd>Used to describe the appearance of Web content</dd>
+                        <dt>JavaScript (JS)</dt>
+                        <dd>The programming language used to build advanced Web sites and applications</dd>
+                    </dl>
+                    <h2>Inline HTML elements</h2>
+                    <p>HTML defines a long list of available inline tags, a complete list of which can be found on the
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer
+                            Network</a>.</p>
+                    <ul>
+                        <li><font _mstmutation="1"><strong _mstmutation="1">To bold text</strong>, use .</font><code
+                                class="language-plaintext highlighter-rouge">&lt;strong&gt;</code></li>
+                        <li><font _mstmutation="1"><em _mstmutation="1">To italicize text</em>, use .</font><code
+                                class="language-plaintext highlighter-rouge">&lt;em&gt;</code></li>
+                        <li><font _mstmutation="1">Abbreviations, like <abbr title="HyperText Markup Language"
+                                                                             _mstmutation="1">HTML</abbr> should use ,
+                            with an optional attribute for the full phrase.</font><code
+                                class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code><code
+                                class="language-plaintext highlighter-rouge">title</code></li>
+                        <li><font _mstmutation="1">Citations, like <cite _mstmutation="1">— Mark Otto</cite>, should use
+                            .</font><code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code></li>
+                        <li><font _mstmutation="1">
+                            <del _mstmutation="1">Deleted</del>
+                            text should use and
+                            <ins _mstmutation="1">inserted</ins>
+                            text should use .</font><code
+                                class="language-plaintext highlighter-rouge">&lt;del&gt;</code><code
+                                class="language-plaintext highlighter-rouge">&lt;ins&gt;</code></li>
+                        <li><font _mstmutation="1">Superscript </font><sup>text</sup><font _mstmutation="1"> uses and
+                            subscript </font><code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code><sub>text</sub><font
+                                _mstmutation="1"> uses .</font><code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>
+                        </li>
+                    </ul>
+                    <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+                    <h2>Heading</h2>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <h3>Sub-heading</h3>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <pre><code>Example code block</code></pre>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                        other highly repetitive body text used throughout.</p>
+                </article>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title mb-1">Another blog post</h2>
+                    <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <blockquote>
+                        <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.
+                        </p>
+                    </blockquote>
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <h3>Example table</h3>
+                    <p>And don't forget about tables in these posts:</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Upvotes</th>
+                            <th>Downvotes</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Alice</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Charlie</td>
+                            <td>7</td>
+                            <td>9</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td>Totals</td>
+                            <td>21</td>
+                            <td>23</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                        other highly repetitive body text used throughout.</p>
+                </article>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title mb-1">New feature</h2>
+                    <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+
+                    <p>This is some additional paragraph placeholder content. It has been written to fill the available
+                        space and show how a longer snippet of text affects the surrounding content. We'll repeat it
+                        often to keep the demonstration flowing, so be on the lookout for this exact same string of
+                        text.</p>
+                    <ul>
+                        <li>First list item</li>
+                        <li>Second list item with a longer description</li>
+                        <li>Third list item to close it out</li>
+                    </ul>
+                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the
+                        other highly repetitive body text used throughout.</p>
+                </article>
+
+                <nav class="blog-pagination" aria-label="Pagination" _mstaria-label="157170">
+                    <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+                    <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
+                </nav>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">About</h4>
+                        <p class="mb-0">Customize this section to tell your visitors a little bit about your
+                            publication, writers, content, or something else entirely. Totally up to you.</p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Archives</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">March 2021</a></li>
+                            <li><a href="#">February 2021</a></li>
+                            <li><a href="#">January 2021</a></li>
+                            <li><a href="#">December 2020</a></li>
+                            <li><a href="#">November 2020</a></li>
+                            <li><a href="#">October 2020</a></li>
+                            <li><a href="#">September 2020</a></li>
+                            <li><a href="#">August 2020</a></li>
+                            <li><a href="#">July 2020</a></li>
+                            <li><a href="#">June 2020</a></li>
+                            <li><a href="#">May 2020</a></li>
+                            <li><a href="#">April 2020</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    {% comment %}<div></div>
+    <div style="position: fixed; width: 28px; left: 0px; top: 0px; height: 28px; cursor: pointer; will-change: transform; font-size: 0px; z-index: 2147483647 !important; display: none;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="27" height="27" rx="5.5" fill="white"></rect>
+            <path d="M16.5 19L14.1564 14.6734M12.309 11.2628L10 6.99997M11.5 19L18 6.99997M12 17.5C12 18.8807 10.8807 20 9.5 20C8.11929 20 7 18.8807 7 17.5C7 16.1193 8.11929 15 9.5 15C10.8807 15 12 16.1193 12 17.5ZM21 17.5C21 18.8807 19.8807 20 18.5 20C17.1193 20 16 18.8807 16 17.5C16 16.1193 17.1193 15 18.5 15C19.8807 15 21 16.1193 21 17.5Z"
+                  stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <rect x="0.5" y="0.5" width="27" height="27" rx="5.5" stroke="#CCCCCC"></rect>
+        </svg>
+    </div>
+    <figure id="kdocs_web_cut_iframe_box"></figure>
+    <iframe id="kdocs__0501__ext_loading" allowtransparency="true"
+            src="chrome-extension://obdgpngffdbfdonamidnhjlpdfmjkgol/kdocs/loading/index.html"
+            style="position: fixed; z-index: 2147483647; width: 336px; height: 60px; right: 20px; top: 20px; overflow: hidden; border: 3px solid rgb(228, 231, 237); background: rgb(255, 255, 255); box-sizing: border-box; border-radius: 8px; box-shadow: rgba(13, 13, 13, 0.08) 0px 12px 32px; display: none;"></iframe>
+{% endcomment %}
+
+{% endblock %}
+
+
+{% block js %}
+
+    {#    <script src="{% static 'js/MathJax.js' %}"></script>#}
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured"></script>
+    <script id="texAllTheThingsPageScript" type="text/javascript"
+    <script src="{% static 'js/pageScript.js' %}"></script>
+    <script id="texAllTheThingsPageScript"
+            src="{% static 'js/pageScript.js' %}"
+            inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
+            displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
+            skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
+            ignoreclass="false" processclass="false"></script>
+    <script type="text/javascript">
+        $(function () {
+            //页面加载完成后自动执行的代码
+
+
+        })
+    </script>
+{% endblock %}

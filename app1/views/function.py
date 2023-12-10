@@ -7,4 +7,6 @@ from django.shortcuts import render, HttpResponse
 def index(request):
     return render(request, "function.html")
 
+def funTranPic(request):
+    return render(request, "funTranPic.html")
 

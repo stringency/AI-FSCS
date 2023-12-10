@@ -1,0 +1,223 @@
+{#https://v5.bootcss.com/docs/examples/masonry/#}
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    AI About
+{% endblock %}
+
+{% block css %}
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div id="MathJax_Message" style="display: none;"></div>
+
+    <main class="container py-5">
+        <h1>关 于 我 们</h1>
+        <p class="lead">——这是我们的一次课程设计的项目。</p>
+
+        <p>编程语言：Python,JavaScript</p>
+        <p>主要框架架构：Django+BootStrap+JQuery+Ajax+MySQL</p>
+        <p>拓展功能所用到的框架：Tensorflow</p>
+        <p>其它：非前后端分离实现</p>
+
+
+        <hr class="my-5">
+
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title that wraps to a new line</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                    <figure class="p-3 mb-0">
+                        <blockquote class="blockquote">
+                            <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                    </svg>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card text-bg-primary text-center p-3">
+                    <figure class="mb-0">
+                        <blockquote class="blockquote">
+                            <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-white">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <svg class="bd-placeholder-img card-img" width="100%" height="260"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card p-3 text-end">
+                    <figure class="mb-0">
+                        <blockquote class="blockquote">
+                            <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is another card with title and supporting text below. This card has
+                            some additional content to make it slightly taller overall.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    {% comment %}
+    <div></div>
+    <div style="position: fixed; width: 28px; left: 0px; top: 0px; height: 28px; cursor: pointer; will-change: transform; font-size: 0px; z-index: 2147483647 !important; display: none;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="27" height="27" rx="5.5" fill="white"></rect>
+            <path d="M16.5 19L14.1564 14.6734M12.309 11.2628L10 6.99997M11.5 19L18 6.99997M12 17.5C12 18.8807 10.8807 20 9.5 20C8.11929 20 7 18.8807 7 17.5C7 16.1193 8.11929 15 9.5 15C10.8807 15 12 16.1193 12 17.5ZM21 17.5C21 18.8807 19.8807 20 18.5 20C17.1193 20 16 18.8807 16 17.5C16 16.1193 17.1193 15 18.5 15C19.8807 15 21 16.1193 21 17.5Z"
+                  stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <rect x="0.5" y="0.5" width="27" height="27" rx="5.5" stroke="#CCCCCC"></rect>
+        </svg>
+    </div>
+    <figure id="kdocs_web_cut_iframe_box"></figure>
+    <iframe id="kdocs__0501__ext_loading" allowtransparency="true"
+            src="chrome-extension://obdgpngffdbfdonamidnhjlpdfmjkgol/kdocs/loading/index.html"
+            style="position: fixed; z-index: 2147483647; width: 336px; height: 60px; right: 20px; top: 20px; overflow: hidden; border: 3px solid rgb(228, 231, 237); background: rgb(255, 255, 255); box-sizing: border-box; border-radius: 8px; box-shadow: rgba(13, 13, 13, 0.08) 0px 12px 32px; display: none;"></iframe>
+{% endcomment %}
+
+
+{% endblock %}
+
+
+{% block js %}
+    <script async="" src="{% static 'js/masonry.pkgd.min.js' %}"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured">
+    </script>
+    <script id="texAllTheThingsPageScript" type="text/javascript"
+            src="{% static 'js/pageScript.js' %}"
+            inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
+            displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
+            skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
+            ignoreclass="false" processclass="false"></script>
+    <script type="text/javascript">
+        $(function () {
+            //页面加载完成后自动执行的代码
+
+
+        })
+    </script>
+{% endblock %}

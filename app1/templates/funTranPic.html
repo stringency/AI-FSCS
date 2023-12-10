@@ -1,0 +1,131 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    AI Function--图像风格转化
+{% endblock %}
+
+{% block css %}
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .bd-highlight {
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, 0.15);
+        }
+
+        .centerFont {
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">图像风格转化</h1>
+                <p class="lead text-muted">
+                    提供内容图像和风格图像，通过AI创造出融合两张图像元素的新图像。想要了解更多的细节和问题请参考源码或者求助社区...</p>
+                <p>
+                    <a href="#" class="btn btn-primary my-2">源 码</a>
+                    <a href="#" class="btn btn-outline-success my-2">社 区</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="panel panel-default border">
+            <div class="panel-heading centerFont"><h1>图像输入区（input）</h1>
+                <div class="d-flex flex-row-reverse bd-highlight">
+                    <div style="height: 30px"></div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="panel-heading text-center">内容图片（content.jpg）</div>
+                        <div class="panel-body">
+                            <div id="m1" style="height: 400px;background-color: red;"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel-heading text-center">风格图片（style.jpg）</div>
+                        <div class="panel-body">
+                            <div id="m2" style="height: 400px;background-color: green;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div clas="row">
+                    <div class="col-sm-12">
+                        <div class="panel-collapse text-center">融合后的图片（result.jpg）</div>
+                        <div class="panel-body">
+                            <div id="m3" style="height: 400px;background-color: yellow;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'pluglns/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'js/echarts.js' %}"></script>
+{% endblock %}

@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app1.views import index, function,API,community,about, admin
+from app1.views import index, function,API,community,about,admin,account
 
 urlpatterns = [
     # path("admin/", admin.site.urls),
@@ -28,6 +28,9 @@ urlpatterns = [
     path("admin/index", admin.admin_index),
     # 前台流量
     path("admin/indexfront", admin.admin_indexfront),
+
+    #登录
+    path("login/",account.login),
 
     # 主页
     path("index/", index.index),

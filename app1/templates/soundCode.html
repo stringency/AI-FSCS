@@ -1,0 +1,141 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    AI soundCode
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/API/API.css' %}">
+    {#    这里可能需要翻墙才能拿到的字体#}
+    <link href="{% static 'css/fonts/fonts_googleapis.css' %}" rel="stylesheet">
+    <style class="__web-inspector-hide-shortcut__">
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <main class="container">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">测试</strong>
+                        <h3 class="mb-0">图像风格转化源码</h3>
+                        <div class="mb-1 text-muted">2023/12/17</div>
+                        <p class="card-text mb-auto">这是基于Tensorflow-GPU==2.10.0版本开发的模块。</p>
+                        <a href="TranPic/" class="stretched-link">进入看看</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                             focusable="false" _mstaria-label="470535" _msthash="26"
+                             src="{% static 'tmp/function/TranPic/output/result_example.jpg' %}" alt="">
+                        <title _msthash="27">Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+                        {% comment %}<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                             focusable="false" _mstaria-label="470535" _msthash="26"><title _msthash="27">
+                            Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" _msthash="28">Thumbnail</text>
+                        </svg>{% endcomment %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">稳定</strong>
+                        <h3 class="mb-0">Post title</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                             focusable="false" _mstaria-label="470535" _msthash="34"><title _msthash="35">
+                            Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" _msthash="36">Thumbnail</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}
+
+{% block js %}
+
+    {#    <script src="{% static 'js/MathJax.js' %}"></script>#}
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured"></script>
+    <script id="texAllTheThingsPageScript" type="text/javascript"></script>
+    <script src="{% static 'js/pageScript.js' %}"></script>
+    <script id="texAllTheThingsPageScript"
+            src="{% static 'js/pageScript.js' %}"
+            inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
+            displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
+            skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
+            ignoreclass="false" processclass="false"></script>
+    <script type="text/javascript">
+        $(function () {
+            //页面加载完成后自动执行的代码
+
+
+        })
+    </script>
+{% endblock %}

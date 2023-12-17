@@ -15,11 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-from app1.views import index, function,API,community,about, admin
+from django.urls import path, re_path
+from app1.views import index, function, API, community, about, admin
+from django.views.static import serve
+from django.conf import settings
 
 urlpatterns = [
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
     # path("admin/", admin.site.urls),
 
     # 管理员登录
@@ -34,14 +36,20 @@ urlpatterns = [
 
     # 功能
     path("function/", function.index),
+    path("function/soundCodeTranPic.html", API.soundCodeTranPic),
     # 图片风格转换功能
     path("function/funTranPic/", function.funTranPic),
+    path("function/funTranPic/communityTranPic.html", community.communityTranPic),
 
     # API
     path("API/", API.index),
+    path("API/soundCode/", API.soundCode),
+    path("API/soundCode/TranPic/", API.soundCodeTranPic),
 
     # 社区
     path("community/", community.index),
+    path("community/soundCodeCommunity/", community.soundCodeCommunity),
+    path("community/soundCodeCommunity/communityTranPic/", community.communityTranPic),
 
     # 关于
     path("about/", about.index),

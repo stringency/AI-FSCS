@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from app1.views import index, function, API, community, about, admin
+from app1.views import index, function, API, community, about, admin, account
 from django.views.static import serve
 from django.conf import settings
 
@@ -31,15 +31,16 @@ urlpatterns = [
     # 前台流量
     path("admin/indexfront", admin.admin_indexfront),
 
+    # 登录
+    path("login/", account.login),
+
     # 主页
     path("index/", index.index),
 
     # 功能
     path("function/", function.index),
-    path("function/soundCodeTranPic.html", API.soundCodeTranPic),
     # 图片风格转换功能
     path("function/funTranPic/", function.funTranPic),
-    path("function/funTranPic/communityTranPic.html", community.communityTranPic),
 
     # API
     path("API/", API.index),
